@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   },
   storiesContainerList: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'center',
   },
   storiesContainer: {
@@ -18,11 +18,11 @@ export const styles = StyleSheet.create({
     margin: 13,
   },
   storiesUser: {
-    fontSize: 15,
+    fontSize: 12,
     marginLeft: '7%',
   },
   horizontalScrollViewContent: {
-    flex: 1,
+    flexGrow: 1,
     alignContent: 'center',
     alignItems: 'center',
   },
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
     marginLeft: '7%',
   },
   horizontalScrollViewContainer: {
-    flex: 1,
+    flex:1,
     height: '30%',
     marginBottom: 15,
   },
