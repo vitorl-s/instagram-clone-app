@@ -4,18 +4,26 @@ export const styles = StyleSheet.create({
   scrollViewContainer: {
     flex: 1,
   },
+  screenContainer:{
+    flex: 1,
+    backgroundColor: 'white',
+  },
   storiesContainerList: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
   },
   storiesContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
     borderColor: 'red',
-    borderWidth: 2,
-    borderRadius: 50,
+    borderWidth: 3,
+    borderRadius: 60,
     height: 60,
     width: 60,
-    margin: 13,
+    marginLeft: 10,
+    marginBottom: 10,
+    marginTop: 15,
   },
   storiesUser: {
     fontSize: 12,
@@ -31,9 +39,9 @@ export const styles = StyleSheet.create({
     marginLeft: '7%',
   },
   horizontalScrollViewContainer: {
-    flex:1,
+    flex: 1,
     height: '30%',
-    marginBottom: 15,
+    marginBottom: 5,
   },
   userPhoto: {
     marginLeft: 15,
@@ -51,5 +59,24 @@ export const styles = StyleSheet.create({
   photoDescription: {
     marginLeft: 5,
     fontWeight: '200',
+  },
+  storiesImgContainer: {
+    flex: 1,
+  },
+  imgStories: {
+    width: 55,
+    height: 55,
+    borderRadius: 55,
+    overflow: 'hidden',
+  },
+  textStoriesContainer: {
+    flex: 1,
+    width: 85,
+    alignItems: 'center',
+  },
+  storiesItem: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
 });
