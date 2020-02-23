@@ -8,7 +8,18 @@ export default function Photos() {
   return (
     <View style={styles.photosContainer}>
       <Image source={{uri: INITIAL_IMAGE}} style={styles.photoImage} />
-      <View>
+      <View style={styles.descriptionPhotoContainer}>
+        <View style={styles.iconsContainer}>
+          <Image source={require('../../assets/Images/like.png')} />
+          <Image
+            source={require('../../assets/Images/comment.png')}
+            style={styles.commentIcon}
+          />
+          <Image
+            source={require('../../assets/Images/send.png')}
+            style={styles.sendIcon}
+          />
+        </View>
         <Text style={styles.userPhoto}>
           {'nome'}{' '}
           <Text style={styles.photoDescription}>photo.description</Text>{' '}

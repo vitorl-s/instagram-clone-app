@@ -30,7 +30,15 @@ export default function HomePage() {
         id: item.id,
       });
     });
+    await shuffleArray(filteredData);
     await setUsersInfo(filteredData);
+  };
+
+  const shuffleArray = async array => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
   };
 
   return (
