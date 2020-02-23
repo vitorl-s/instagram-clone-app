@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   scrollViewContainer: {
     flex: 1,
   },
-  screenContainer:{
+  screenContainer: {
     flex: 1,
     backgroundColor: 'white',
   },
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   photosContainer: {
-    marginTop: 50,
+    marginTop: 10,
     flex: 1,
   },
   photoImage: {

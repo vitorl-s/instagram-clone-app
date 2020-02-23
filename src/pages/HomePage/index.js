@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
 import {styles} from './styles';
 import Header from '../../components/Header';
-const INITIAL_IMAGE =
-  'https://nacoesunidas.org/wp-content/uploads/2016/03/amazonia_floresta_%C3%A1gua.jpg';
+import Photos from '../../components/Photos';
+
 export default function HomePage() {
   const [fullName, setFullName] = useState({
     name: 'name',
@@ -24,7 +24,11 @@ export default function HomePage() {
     const data = await response.json();
     let filteredData = [];
     await data.map((item, index) => {
-      filteredData.push({name: item.login, image: item.avatar_url});
+      filteredData.push({
+        name: item.login,
+        image: item.avatar_url,
+        id: item.id,
+      });
     });
     await setUsersInfo(filteredData);
   };
@@ -39,8 +43,8 @@ export default function HomePage() {
           style={styles.horizontalScrollViewContainer}
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.horizontalScrollViewContent}>
-          {usersInfo.map((item, index) => (
-            <View key={index} style={styles.storiesItem}>
+          {usersInfo.map(item => (
+            <View key={item.id} style={styles.storiesItem}>
               <View style={styles.storiesContainer}>
                 <View style={styles.storiesImgContainer}>
                   <Image source={{uri: item.image}} style={styles.imgStories} />
@@ -56,15 +60,7 @@ export default function HomePage() {
             </View>
           ))}
         </ScrollView>
-        <View style={styles.photosContainer}>
-          <Image source={{uri: INITIAL_IMAGE}} style={styles.photoImage} />
-          <View>
-            <Text style={styles.userPhoto}>
-              {fullName.name}{' '}
-              <Text style={styles.photoDescription}>photo.description</Text>{' '}
-            </Text>
-          </View>
-        </View>
+        <Photos />
       </ScrollView>
     </View>
   );
