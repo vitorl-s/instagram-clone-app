@@ -23,14 +23,23 @@ export const styles = StyleSheet.create({
   iconsContainer: {
     flexDirection: 'row',
     marginLeft: 10,
+    marginTop: -10,
   },
   descriptionPhotoContainer: {
     flex: 1,
   },
+  likeIcon: {
+    resizeMode: 'contain',
+    height: 25,
+  },
   commentIcon: {
     marginLeft: 15,
+    resizeMode: 'contain',
+    height: 25,
   },
   sendIcon: {
     marginLeft: 15,
+    resizeMode: 'contain',
+    height: 25,
   },
 });

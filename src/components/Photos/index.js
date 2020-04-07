@@ -1,16 +1,17 @@
 import React from 'react';
 import {View, Image, Text} from 'react-native';
 import {styles} from './styles';
-const INITIAL_IMAGE =
-  'https://nacoesunidas.org/wp-content/uploads/2016/03/amazonia_floresta_%C3%A1gua.jpg';
 
-export default function Photos() {
+export default function Photos(...props) {
   return (
     <View style={styles.photosContainer}>
-      <Image source={{uri: INITIAL_IMAGE}} style={styles.photoImage} />
+      <Image source={{uri: props[0].imageUrl}} style={styles.photoImage} />
       <View style={styles.descriptionPhotoContainer}>
         <View style={styles.iconsContainer}>
-          <Image source={require('../../assets/Images/like.png')} />
+          <Image
+            source={require('../../assets/Images/like.png')}
+            style={styles.likeIcon}
+          />
           <Image
             source={require('../../assets/Images/comment.png')}
             style={styles.commentIcon}
